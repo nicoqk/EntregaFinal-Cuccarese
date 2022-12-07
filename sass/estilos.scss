@@ -1,0 +1,177 @@
+/*Estilos generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+@import "header";
+@import "footer";
+@mixin secciones (){
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3{
+            padding: 0.5rem;
+            width: 85%;
+            color: #fff;
+            text-align: center;
+            background-color: #021b49;
+        }
+        img{
+            width: 100%;
+        }
+        p{
+            margin-top: 1rem;
+            width: 85%;
+            color: #021b49;
+        }
+        button{
+            background-color: #021b49;
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+}
+
+/* Estilos Index */
+.contenedorGrilla{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.3fr 1fr 1fr 0.3fr;
+    grid-template-areas:
+      "header header header header"
+      "slide slide slide slide"
+      "seccionQuienes seccionQuienes seccionQue seccionQue"
+      "footer footer footer footer";
+    .slide{
+        grid-area: slide;
+    }
+    .seccionQuienes{
+        @include secciones();
+        grid-area: seccionQuienes;
+     }
+    .seccionQue{
+        @include secciones();
+        grid-area: seccionQue;
+    } 
+}
+
+/* Estilos Empresa */
+.contenedorEmpresa{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.3fr 0.3fr 0.3 1fr 0.3fr;
+    grid-template-areas:
+      "header header header header"
+      "titulo titulo titulo titulo"
+      "subtitulo subtitulo subtitulo subtitulo"
+      "imagen texto texto texto"
+      "footer footer footer footer";
+        .titulo{
+        grid-area: titulo;
+        margin: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px dotted #021b49;
+        }
+        .subtitulo{
+            grid-area: subtitulo;
+            margin: 1rem 2rem;
+            padding-bottom: 1rem;
+            font-style: italic;
+        }
+        .imagen{
+            grid-area: imagen;
+            margin: 0 1rem 0 2rem;
+    
+        }
+        .texto{
+            grid-area: texto;
+            margin-right: 2rem;
+        }
+    
+  }
+
+/* Estilos Servicios */
+.contenedorServicios{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.3fr 0.3fr 0.3 1fr 0.3fr;
+    grid-template-areas:
+      "header header header header"
+      "titulo titulo titulo titulo"
+      "subtitulo subtitulo subtitulo subtitulo"
+      "imagen imagen lista lista"
+      "footer footer footer footer";
+      .titulo{
+        grid-area: titulo;
+        margin: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px dotted #021b49;
+        }
+        .subtitulo{
+            grid-area: subtitulo;
+            margin: 1rem 2rem;
+            padding-bottom: 1rem;
+            font-style: italic;
+        }
+        .imagen{
+            grid-area: imagen;
+            margin: 0 1rem 0 2rem;
+    
+        }
+        .lista{
+            grid-area: lista;
+            margin-right: 1rem;
+            list-style: none;
+        }
+}
+
+/* Estilos Certificaciones */
+.contenedorCertificados{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.3fr 0.3fr 0.3 1fr 0.3fr;
+    grid-template-areas:
+      "header header header header"
+      "titulo titulo titulo titulo"
+      "subtitulo subtitulo subtitulo subtitulo"
+      "imagen texto texto texto"
+      "boton boton boton boton"
+      "footer footer footer footer";
+        .titulo{
+        grid-area: titulo;
+        margin: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px dotted #021b49;
+        }
+        .subtitulo{
+            grid-area: subtitulo;
+            margin: 1rem 2rem;
+            padding-bottom: 1rem;
+            font-style: italic;
+        }
+        .imagen{
+            grid-area: imagen;
+            margin: 0 1rem 0 2rem;
+    
+        }
+        .texto{
+            grid-area: texto;
+            margin-right: 2rem;
+            padding-top: 0.2rem;
+        }
+        .boton{
+          grid-area: boton;
+          text-align: right; 
+          margin-right: 2rem;
+        }
+    
+  }
+
+
+
+@import "mediaQuery";
