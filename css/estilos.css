@@ -111,7 +111,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 0.3fr 0.3fr 0.3 1fr 0.3fr;
-  grid-template-areas: "header header header header" "titulo titulo titulo titulo" "subtitulo subtitulo subtitulo subtitulo" "imagen imagen lista lista" "footer footer footer footer"; }
+  grid-template-areas: "header header header header" "titulo titulo titulo titulo" "subtitulo subtitulo subtitulo subtitulo" "imagen lista lista lista" "footer footer footer footer"; }
   .contenedorServicios .titulo {
     grid-area: titulo;
     margin: 2rem;
