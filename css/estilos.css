@@ -124,7 +124,7 @@
     font-style: italic; }
   .contenedorServicios .imagen {
     grid-area: imagen;
-    margin-left: 1rem; }
+    width: 100%; }
   .contenedorServicios .lista {
     grid-area: lista;
     margin-right: 1rem; }
