@@ -8,6 +8,8 @@
 
 @import "header";
 @import "footer";
+
+/*mixin secciones del index*/
 @mixin secciones (){
         margin-top: 2rem;
         display: flex;
@@ -27,6 +29,7 @@
             margin-top: 1rem;
             width: 85%;
             color: #021b49;
+            font-size: 0.8rem;
         }
         button{
             background-color: #021b49;
@@ -85,12 +88,13 @@
         }
         .imagen{
             grid-area: imagen;
-            margin: 0 1rem 0 2rem;
+            margin: 0 1rem 0 1rem;
     
         }
         .texto{
             grid-area: texto;
-            margin-right: 2rem;
+            margin-right: 1rem;
+            font-size: 0.9rem;
         }
     
   }
@@ -120,13 +124,16 @@
         }
         .imagen{
             grid-area: imagen;
-            margin: 0 1rem 0 2rem;
-    
+            margin-left: 1rem;
         }
         .lista{
             grid-area: lista;
             margin-right: 1rem;
-            list-style: none;
+            ul{            
+                li{
+                    list-style:square;
+                }
+            }
         }
 }
 
@@ -153,6 +160,7 @@
             margin: 1rem 2rem;
             padding-bottom: 1rem;
             font-style: italic;
+            font-size: 0.8rem;
         }
         .imagen{
             grid-area: imagen;
@@ -163,6 +171,7 @@
             grid-area: texto;
             margin-right: 2rem;
             padding-top: 0.2rem;
+            font-size: 0.8rem;
         }
         .boton{
           grid-area: boton;
@@ -172,6 +181,36 @@
     
   }
 
+/*estilos contacto*/
+.contenedorContacto{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.3fr 0.3fr 0.3 1fr 0.3fr;
+    grid-template-areas:
+      "header header header header"
+      "titulo titulo titulo titulo"
+      "texto texto texto texto"
+      "formulario formulario mapa mapa"
+      "footer footer footer footer";
+      .titulo{
+        grid-area: titulo;
+        margin: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px dotted #021b49;
+        }
+      .texto{
+        grid-area: texto;
+        margin: 1rem 2rem;
+        padding-bottom: 1rem;
+        font-style: italic;
+      }
+      .formulario{
+        grid-area: formulario;
+        margin: 1rem 2rem;
+        padding-bottom: 1rem;
+      }
 
+}
 
 @import "mediaQuery";
+

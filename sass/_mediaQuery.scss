@@ -38,7 +38,8 @@
       }
      .texto{
         grid-area: texto;
-        text-align: center;
+        text-align: justify;
+        padding: 0.8rem;
       }
     }
 }
@@ -62,13 +63,13 @@
     }
    .imagen{
       grid-area: imagen;
+      width: 100%;
       text-align: center;
       padding: 0;
       margin: 0 0 1rem 0;
     }
    .lista{
       grid-area: lista;
-      text-align: center;
       list-style: circle;
     }
   }
@@ -104,6 +105,24 @@
     }
     .boton{
       margin-top: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+/*media query contacto*/
+@media screen and (max-width:576px){
+  .contenedorContacto {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "titulo"
+      "texto"
+      "formulario"
+      "mapa"
+      "footer";
+   .texto{
+      grid-area: texto;
       text-align: center;
     }
   }

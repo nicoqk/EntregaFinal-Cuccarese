@@ -15,6 +15,7 @@
       text-decoration: underline; }
 
 .footer {
+  height: 150px;
   margin-top: 2rem;
   grid-area: footer;
   display: flex;
@@ -23,6 +24,7 @@
   background-color: #1f1f1f;
   color: #fff; }
 
+/*mixin secciones del index*/
 /* Estilos Index */
 .contenedorGrilla {
   display: grid;
@@ -48,7 +50,8 @@
     .contenedorGrilla .seccionQuienes p {
       margin-top: 1rem;
       width: 85%;
-      color: #021b49; }
+      color: #021b49;
+      font-size: 0.8rem; }
     .contenedorGrilla .seccionQuienes button {
       background-color: #021b49; }
       .contenedorGrilla .seccionQuienes button a {
@@ -71,7 +74,8 @@
     .contenedorGrilla .seccionQue p {
       margin-top: 1rem;
       width: 85%;
-      color: #021b49; }
+      color: #021b49;
+      font-size: 0.8rem; }
     .contenedorGrilla .seccionQue button {
       background-color: #021b49; }
       .contenedorGrilla .seccionQue button a {
@@ -96,10 +100,11 @@
     font-style: italic; }
   .contenedorEmpresa .imagen {
     grid-area: imagen;
-    margin: 0 1rem 0 2rem; }
+    margin: 0 1rem 0 1rem; }
   .contenedorEmpresa .texto {
     grid-area: texto;
-    margin-right: 2rem; }
+    margin-right: 1rem;
+    font-size: 0.9rem; }
 
 /* Estilos Servicios */
 .contenedorServicios {
@@ -119,11 +124,12 @@
     font-style: italic; }
   .contenedorServicios .imagen {
     grid-area: imagen;
-    margin: 0 1rem 0 2rem; }
+    margin-left: 1rem; }
   .contenedorServicios .lista {
     grid-area: lista;
-    margin-right: 1rem;
-    list-style: none; }
+    margin-right: 1rem; }
+    .contenedorServicios .lista ul li {
+      list-style: square; }
 
 /* Estilos Certificaciones */
 .contenedorCertificados {
@@ -140,18 +146,41 @@
     grid-area: subtitulo;
     margin: 1rem 2rem;
     padding-bottom: 1rem;
-    font-style: italic; }
+    font-style: italic;
+    font-size: 0.8rem; }
   .contenedorCertificados .imagen {
     grid-area: imagen;
     margin: 0 1rem 0 2rem; }
   .contenedorCertificados .texto {
     grid-area: texto;
     margin-right: 2rem;
-    padding-top: 0.2rem; }
+    padding-top: 0.2rem;
+    font-size: 0.8rem; }
   .contenedorCertificados .boton {
     grid-area: boton;
     text-align: right;
     margin-right: 2rem; }
+
+/*estilos contacto*/
+.contenedorContacto {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.3fr 0.3fr 0.3 1fr 0.3fr;
+  grid-template-areas: "header header header header" "titulo titulo titulo titulo" "texto texto texto texto" "formulario formulario mapa mapa" "footer footer footer footer"; }
+  .contenedorContacto .titulo {
+    grid-area: titulo;
+    margin: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dotted #021b49; }
+  .contenedorContacto .texto {
+    grid-area: texto;
+    margin: 1rem 2rem;
+    padding-bottom: 1rem;
+    font-style: italic; }
+  .contenedorContacto .formulario {
+    grid-area: formulario;
+    margin: 1rem 2rem;
+    padding-bottom: 1rem; }
 
 /*** MEDIA QUERY ***/
 /*media query index*/
@@ -177,7 +206,8 @@
       margin: 0 0 1rem 0; }
     .contenedorEmpresa .texto {
       grid-area: texto;
-      text-align: center; } }
+      text-align: justify;
+      padding: 0.8rem; } }
 
 /*media query servicios*/
 @media screen and (max-width: 576px) {
@@ -191,12 +221,12 @@
       text-align: center; }
     .contenedorServicios .imagen {
       grid-area: imagen;
+      width: 100%;
       text-align: center;
       padding: 0;
       margin: 0 0 1rem 0; }
     .contenedorServicios .lista {
       grid-area: lista;
-      text-align: center;
       list-style: circle; } }
 
 /*media query certificados*/
@@ -219,4 +249,13 @@
       text-align: center; }
     .contenedorCertificados .boton {
       margin-top: 1rem;
+      text-align: center; } }
+
+/*media query contacto*/
+@media screen and (max-width: 576px) {
+  .contenedorContacto {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "titulo" "texto" "formulario" "mapa" "footer"; }
+    .contenedorContacto .texto {
+      grid-area: texto;
       text-align: center; } }
