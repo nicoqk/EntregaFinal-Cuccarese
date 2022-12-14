@@ -221,9 +221,9 @@
       text-align: center; }
     .contenedorServicios .imagen {
       grid-area: imagen;
-      width: 100%;
+      width: 400px;
       text-align: center;
-      padding: 0;
+      padding: 0.2rem;
       margin: 0 0 1rem 0; }
     .contenedorServicios .lista {
       grid-area: lista;
