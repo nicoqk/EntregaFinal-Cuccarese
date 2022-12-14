@@ -221,10 +221,11 @@
       text-align: center; }
     .contenedorServicios .imagen {
       grid-area: imagen;
-      width: 400px;
       text-align: center;
-      padding: 0.2rem;
+      padding: 0.5rem;
       margin: 0 0 1rem 0; }
+      .contenedorServicios .imagen img {
+        width: 400px; }
     .contenedorServicios .lista {
       grid-area: lista;
       list-style: circle; } }
